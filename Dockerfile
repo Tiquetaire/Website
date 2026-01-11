@@ -1,16 +1,17 @@
 # Stage 1: Build
-FROM oven/bun:1-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Install dependencies
-COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+# We use npm here because it is more stable under QEMU emulation for multi-platform builds
+COPY package.json ./
+RUN npm install
 
 # Copy source code
 COPY . .
 
 # Build the static site
-RUN bun run build
+RUN npm run build
 
 # Stage 2: Runner (Ultra-lightweight Nginx)
 FROM nginx:alpine AS runner
