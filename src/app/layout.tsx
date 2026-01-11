@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="ca">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=analytics,contactless,downloading,bolt,bar_chart,map,lock,palette,code,shield" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=analytics,bar_chart,bolt,code,contactless,downloading,lock,map,palette,shield" />
       </head>
       <body className={inter.className}>
         {children}
