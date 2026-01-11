@@ -14,6 +14,10 @@ RUN bun run build
 
 # Stage 2: Runner (Ultra-lightweight Nginx)
 FROM nginx:alpine AS runner
+
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 WORKDIR /usr/share/nginx/html
 
 # Clean default nginx contents
