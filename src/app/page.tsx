@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Link from 'next/link';
 import Logo from './components/Logo';
 import { translations, Language } from './translations';
 import styles from './page.module.css';
@@ -177,17 +177,23 @@ export default function Home() {
           </div>
           <div className={styles.featuresGrid}>
             <div className="card">
-              <div className={styles.featureIcon}>⚡</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">bolt</span>
+              </div>
               <h3>{t.features.items.instant.title}</h3>
               <p>{t.features.items.instant.description}</p>
             </div>
             <div className="card">
-              <div className={styles.featureIcon}>📊</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">bar_chart</span>
+              </div>
               <h3>{t.features.items.details.title}</h3>
               <p>{t.features.items.details.description}</p>
             </div>
             <div className="card">
-              <div className={styles.featureIcon}>🗺️</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">map</span>
+              </div>
               <h3>{t.features.items.multiAtm.title}</h3>
               <p>{t.features.items.multiAtm.description}</p>
               <div className={styles.atmBadges}>
@@ -197,17 +203,23 @@ export default function Home() {
               </div>
             </div>
             <div className="card">
-              <div className={styles.featureIcon}>🔒</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">lock</span>
+              </div>
               <h3>{t.features.items.privacy.title}</h3>
               <p>{t.features.items.privacy.description}</p>
             </div>
             <div className="card">
-              <div className={styles.featureIcon}>✨</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">palette</span>
+              </div>
               <h3>{t.features.items.modern.title}</h3>
               <p>{t.features.items.modern.description}</p>
             </div>
             <div className="card">
-              <div className={styles.featureIcon}>💻</div>
+              <div className={styles.featureIcon}>
+                <span className="material-symbols-outlined">code</span>
+              </div>
               <h3>{t.features.items.opensource.title}</h3>
               <p>{t.features.items.opensource.description}</p>
             </div>
@@ -225,21 +237,27 @@ export default function Home() {
           <div className={styles.stepsContainer}>
             <div className={styles.step}>
               <div className={styles.stepNumber}>1</div>
-              <div className={styles.stepIcon}>📱</div>
+              <div className={styles.stepIcon}>
+                <span className="material-symbols-outlined">downloading</span>
+              </div>
               <h3>{t.howItWorks.steps.download.title}</h3>
               <p>{t.howItWorks.steps.download.description}</p>
             </div>
             <div className={styles.stepConnector}></div>
             <div className={styles.step}>
               <div className={styles.stepNumber}>2</div>
-              <div className={styles.stepIcon}>📡</div>
+              <div className={styles.stepIcon}>
+                <span className="material-symbols-outlined">contactless</span>
+              </div>
               <h3>{t.howItWorks.steps.tap.title}</h3>
               <p>{t.howItWorks.steps.tap.description}</p>
             </div>
             <div className={styles.stepConnector}></div>
             <div className={styles.step}>
               <div className={styles.stepNumber}>3</div>
-              <div className={styles.stepIcon}>👀</div>
+              <div className={styles.stepIcon}>
+                <span className="material-symbols-outlined">analytics</span>
+              </div>
               <h3>{t.howItWorks.steps.view.title}</h3>
               <p>{t.howItWorks.steps.view.description}</p>
             </div>
@@ -286,6 +304,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Footer */}
       <footer className={styles.footer}>
         <div className="container">
@@ -310,6 +329,13 @@ export default function Home() {
                 <li>{t.features.items.instant.title}</li>
                 <li>{t.features.items.privacy.title}</li>
                 <li>{t.features.items.opensource.title}</li>
+              </ul>
+            </div>
+            <div className={styles.footerSection}>
+              <h4>{t.privacy.title}</h4>
+              <ul>
+                <li><Link href="/privacy">{t.privacy.title}</Link></li>
+                <li>{t.footer.license}</li>
               </ul>
             </div>
           </div>

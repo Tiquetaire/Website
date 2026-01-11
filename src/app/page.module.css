@@ -397,6 +397,14 @@
 .featureIcon {
   font-size: 3rem;
   margin-bottom: var(--spacing-md);
+  color: var(--primary);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.featureIcon span {
+  font-size: inherit;
 }
 
 .featuresGrid h3 {
@@ -456,6 +464,14 @@
 .stepIcon {
   font-size: 4rem;
   margin-bottom: var(--spacing-md);
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepIcon span {
+  font-size: inherit;
 }
 
 .step h3 {
@@ -611,8 +627,41 @@
   font-style: italic;
 }
 
+/* Privacy Section */
+.privacy {
+  padding-bottom: 2rem !important;
+}
+
+.privacyCard {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-xxl);
+  border-radius: var(--radius-xxl);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.privacyCard h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.privacyCard p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
+
+  .motivationCard,
+  .privacyCard {
+    padding: var(--spacing-lg);
+  }
+
   .navLinks {
     display: none;
   }

@@ -83,6 +83,10 @@ export interface Translations {
         girona: string;
         lleida: string;
     };
+    privacy: {
+        title: string;
+        content: string;
+    };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -169,6 +173,10 @@ export const translations: Record<Language, Translations> = {
             girona: 'ATM Girona',
             lleida: 'ATM Lleida',
         },
+        privacy: {
+            title: 'Política de privacitat',
+            content: 'Tiquetaire prioritza la teva privacitat. L\'aplicació no recull, ni emmagatzema, ni envia cap dada a cap servidor extern. Tota la informació llegida de la targeta de transport es processa localment al teu dispositiu i desapareix en tancar l\'aplicació.',
+        },
     },
     es: {
         nav: {
@@ -253,6 +261,10 @@ export const translations: Record<Language, Translations> = {
             girona: 'ATM Girona',
             lleida: 'ATM Lleida',
         },
+        privacy: {
+            title: 'Política de privacidad',
+            content: 'Tiquetaire prioriza tu privacidad. La aplicación no recoge, ni almacena, ni envía ningún dato a ningún servidor externo. Toda la información leída de la tarjeta de transporte se procesa localmente en tu dispositivo y desaparece al cerrar la aplicación.',
+        },
     },
     en: {
         nav: {
@@ -336,6 +348,10 @@ export const translations: Record<Language, Translations> = {
             tarragona: 'ATM Camp de Tarragona',
             girona: 'ATM Girona',
             lleida: 'ATM Lleida',
+        },
+        privacy: {
+            title: 'Privacy Policy',
+            content: 'Tiquetaire prioritizes your privacy. The application does not collect, store, or send any data to any external server. All information read from the transport card is processed locally on your device and disappears when the application is closed.',
         },
     },
 };
