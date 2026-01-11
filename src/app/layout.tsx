@@ -25,6 +25,15 @@ export const metadata: Metadata = {
     title: "Tiquetaire - Consulta la teva targeta de transport",
     description: "Llegeix les dades de la teva targeta ATM de Tarragona, Girona o Lleida directament des del teu telèfon.",
   },
+  icons: {
+    icon: [
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export const viewport = {
@@ -42,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="ca">
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=analytics,contactless,downloading" />
       </head>
       <body className={inter.className}>
         {children}
