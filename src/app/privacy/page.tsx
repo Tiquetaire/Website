@@ -45,14 +45,51 @@ export default function PrivacyPage() {
                             {t.privacy.title}
                         </h1>
                         <div style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
-                            <p style={{ fontWeight: '600', color: 'var(--text-primary)', marginBottom: '1.5rem' }}>{t.privacy.developer}</p>
-                            <p>{t.privacy.content}</p>
-                            <p style={{ marginTop: '1.5rem', fontWeight: '500', color: 'var(--text-primary)' }}>{t.privacy.noData}</p>
-                            <p style={{ marginTop: '1.5rem' }}>{t.privacy.googlePlayCrashReport}</p>
+                            <p style={{ fontSize: '1rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>{t.privacy.lastUpdate}</p>
 
-                            <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(242, 140, 0, 0.05)', borderRadius: 'var(--radius-lg)', borderLeft: '4px solid var(--primary)' }}>
+                            <p style={{ fontWeight: '600', color: 'var(--text-primary)', marginBottom: '2rem' }}>{t.privacy.developer}</p>
+
+                            <div style={{ marginBottom: '2rem', padding: '1.5rem', background: 'rgba(242, 140, 0, 0.05)', borderRadius: 'var(--radius-lg)', borderLeft: '4px solid var(--primary)' }}>
                                 <p>{t.footer.disclaimer}</p>
                             </div>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.introduction.title}</h2>
+                                <p>{t.privacy.sections.introduction.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.dataCollection.title}</h2>
+                                <p>{t.privacy.sections.dataCollection.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.compliance.title}</h2>
+                                <p>{t.privacy.sections.compliance.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.thirdParty.title}</h2>
+                                <p>{t.privacy.sections.thirdParty.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.googlePlay.title}</h2>
+                                <p>{t.privacy.sections.googlePlay.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.changes.title}</h2>
+                                <p>{t.privacy.sections.changes.content}</p>
+                            </section>
+
+                            <section style={{ marginBottom: '2.5rem' }}>
+                                <h2 style={{ fontSize: '1.8rem', color: 'var(--text-primary)', marginBottom: '1rem' }}>{t.privacy.sections.contact.title}</h2>
+                                <p>{t.privacy.sections.contact.content}</p>
+                                <p style={{ marginTop: '0.5rem', fontWeight: 'bold', color: 'var(--primary)' }}>
+                                    {t.privacy.sections.contact.email}
+                                </p>
+                            </section>
                         </div>
                     </div>
                 </div>

@@ -85,10 +85,17 @@ export interface Translations {
     };
     privacy: {
         title: string;
-        content: string;
+        lastUpdate: string;
         developer: string;
-        noData: string;
-        googlePlayCrashReport: string;
+        sections: {
+            introduction: { title: string; content: string };
+            dataCollection: { title: string; content: string };
+            compliance: { title: string; content: string };
+            thirdParty: { title: string; content: string };
+            googlePlay: { title: string; content: string };
+            changes: { title: string; content: string };
+            contact: { title: string; content: string; email: string };
+        };
     };
 }
 
@@ -178,10 +185,39 @@ export const translations: Record<Language, Translations> = {
         },
         privacy: {
             title: 'Política de privacitat',
-            content: 'Tiquetaire prioritza la teva privacitat. L\'aplicació no recull, ni emmagatzema, ni envia cap dada a cap servidor extern. Tota la informació llegida de la targeta de transport es processa localment al teu dispositiu i desapareix en tancar l\'aplicació.',
+            lastUpdate: 'Última actualització: 2026-01-20',
             developer: 'Desenvolupador: Òscar Rovira',
-            noData: 'Aquesta aplicació no recull cap dada! No hi ha anuncis ni mecanismes de seguiment.',
-            googlePlayCrashReport: 'Si l\'aplicació s\'ha instal·lat mitjançant Google Play, el desenvolupador rep un informe genèric en cas que l\'aplicació falli. Les dades d\'aquest informe de fallades no es compartiran amb ningú i només s\'utilitzaran per millorar l\'aplicació.',
+            sections: {
+                introduction: {
+                    title: 'Introducció',
+                    content: 'A Tiquetaire, respectem la teva privacitat i ens comprometem a complir amb el Reglament General de Protecció de Dades (RGPD) i altres normatives aplicables. Aquesta política explica com gestionem les teves dades personals.',
+                },
+                dataCollection: {
+                    title: 'Recollida de dades',
+                    content: 'Tiquetaire no recull, emmagatzema ni processa cap informació personal dels usuaris. La nostra aplicació està dissenyada per funcionar sense necessitat de dades personals. Aquesta aplicació no té anuncis ni mecanismes de seguiment.',
+                },
+                compliance: {
+                    title: 'Compliment de les normatives europees',
+                    content: 'Ens comprometem a complir amb totes les normatives europees rellevants, incloent-hi el RGPD. Atès que no recollim ni processem dades personals, no cal sol·licitar el teu consentiment ni implementar mesures addicionals per al tractament de dades.',
+                },
+                thirdParty: {
+                    title: 'Enllaços a tercers',
+                    content: 'La nostra aplicació no conté enllaços ni integra serveis de tercers que puguin recollir dades personals.',
+                },
+                googlePlay: {
+                    title: 'Google Play i informes de fallades',
+                    content: 'Si l\'aplicació s\'ha instal·lat mitjançant Google Play, el desenvolupador rep un informe genèric en cas que l\'aplicació falli. Les dades d\'aquest informe de fallades no es compartiran amb ningú i només s\'utilitzaran per millorar l\'aplicació.',
+                },
+                changes: {
+                    title: 'Canvis en la política',
+                    content: 'Ens reservem el dret de modificar aquesta política de privacitat per assegurar el compliment de noves regulacions o per raons operatives. T\'informarem de qualsevol canvi publicant una versió actualitzada en aquesta pàgina.',
+                },
+                contact: {
+                    title: 'Contacte',
+                    content: 'Si tens preguntes o dubtes sobre aquesta política de privacitat, pots contactar-nos a:',
+                    email: 'Correu electrònic: hello@tiquetaire.com',
+                },
+            },
         },
     },
     es: {
@@ -269,10 +305,39 @@ export const translations: Record<Language, Translations> = {
         },
         privacy: {
             title: 'Política de privacidad',
-            content: 'Tiquetaire prioriza tu privacidad. La aplicación no recoge, ni almacena, ni envía ningún dato a ningún servidor externo. Toda la información leída de la tarjeta de transporte se procesa localmente en tu dispositivo y desaparece al cerrar la aplicación.',
+            lastUpdate: 'Última actualización: 2026-01-20',
             developer: 'Desarrollador: Oscar Rovira',
-            noData: '¡Esta aplicación no recoge ningún dato! No hay anuncios ni mecanismos de seguimiento.',
-            googlePlayCrashReport: 'Si la aplicación se instaló mediante Google Play, el desarrollador recibe un informe genérico en caso de que la aplicación falle. Los datos de este informe de fallos no se compartirán con nadie y solo se utilizarán para mejorar la aplicación.',
+            sections: {
+                introduction: {
+                    title: 'Introducción',
+                    content: 'En Tiquetaire, respetamos tu privacidad y nos comprometemos a cumplir con el Reglamento General de Protección de Datos (RGPD) y otras normativas aplicables. Esta política explica cómo gestionamos tus datos personales.',
+                },
+                dataCollection: {
+                    title: 'Recogida de datos',
+                    content: 'Tiquetaire no recoge, almacena ni procesa ninguna información personal de los usuarios. Nuestra aplicación está diseñada para funcionar sin necesidad de datos personales. Esta aplicación no tiene anuncios ni mecanismos de seguimiento.',
+                },
+                compliance: {
+                    title: 'Cumplimiento de las normativas europeas',
+                    content: 'Nos comprometemos a cumplir con todas las normativas europeas relevantes, incluyendo el RGPD. Dado que no recogemos ni procesamos datos personales, no es necesario solicitar tu consentimiento ni implementar medidas adicionales para el tratamiento de datos.',
+                },
+                thirdParty: {
+                    title: 'Enlaces a terceros',
+                    content: 'Nuestra aplicación no contiene enlaces ni integra servicios de terceros que puedan recoger datos personales.',
+                },
+                googlePlay: {
+                    title: 'Google Play e informes de fallos',
+                    content: 'Si la aplicación se instaló mediante Google Play, el desarrollador recibe un informe genérico en caso de que la aplicación falle. Los datos de este informe de fallos no se compartirán con nadie y solo se utilizarán para mejorar la aplicación.',
+                },
+                changes: {
+                    title: 'Cambios en la política',
+                    content: 'Nos reservamos el derecho de modificar esta política de privacidad para asegurar el cumplimiento de nuevas regulaciones o por razones operativas. Te informaremos de cualquier cambio publicando una versión actualizada en esta página.',
+                },
+                contact: {
+                    title: 'Contacto',
+                    content: 'Si tienes preguntas o dudas sobre esta política de privacidad, puedes contactarnos en:',
+                    email: 'Correo electrónico: hello@tiquetaire.com',
+                },
+            },
         },
     },
     en: {
@@ -360,10 +425,39 @@ export const translations: Record<Language, Translations> = {
         },
         privacy: {
             title: 'Privacy Policy',
-            content: 'Tiquetaire prioritizes your privacy. The application does not collect, store, or send any data to any external server. All information read from the transport card is processed locally on your device and disappears when the application is closed.',
+            lastUpdate: 'Last updated: 2026-01-20',
             developer: 'Developer: Oscar Rovira',
-            noData: 'This app does not collect any data! There are no ads or tracking mechanisms.',
-            googlePlayCrashReport: 'If the app was installed using Google Play the developer gets a generic report in case of an app crash. The data in this crash report will not be shared with anyone and only be used to improve the app.',
+            sections: {
+                introduction: {
+                    title: 'Introduction',
+                    content: 'At Tiquetaire, we respect your privacy and are committed to complying with the General Data Protection Regulation (GDPR) and other applicable regulations. This policy explains how we handle your personal data.',
+                },
+                dataCollection: {
+                    title: 'Data Collection',
+                    content: 'Tiquetaire does not collect, store, or process any personal information from users. Our application is designed to function without the need for personal data. This app has no ads or tracking mechanisms.',
+                },
+                compliance: {
+                    title: 'Compliance with European Regulations',
+                    content: 'We are committed to complying with all relevant European regulations, including the GDPR. Since we do not collect or process personal data, it is not necessary to request your consent or implement additional measures for data processing.',
+                },
+                thirdParty: {
+                    title: 'Third-Party Links',
+                    content: 'Our application does not contain links to or integrate third-party services that could collect personal data.',
+                },
+                googlePlay: {
+                    title: 'Google Play and Crash Reports',
+                    content: 'If the app was installed using Google Play, the developer receives a generic report in case of an app crash. The data in this crash report will not be shared with anyone and will only be used to improve the app.',
+                },
+                changes: {
+                    title: 'Changes to the Policy',
+                    content: 'We reserve the right to modify this privacy policy to ensure compliance with new regulations or for operational reasons. We will inform you of any updates by posting an updated version on this page.',
+                },
+                contact: {
+                    title: 'Contact',
+                    content: 'If you have questions or concerns about this privacy policy, you can contact us at:',
+                    email: 'Email: hello@tiquetaire.com',
+                },
+            },
         },
     },
 };
