@@ -86,6 +86,9 @@ export interface Translations {
     privacy: {
         title: string;
         content: string;
+        developer: string;
+        noData: string;
+        googlePlayCrashReport: string;
     };
 }
 
@@ -176,6 +179,9 @@ export const translations: Record<Language, Translations> = {
         privacy: {
             title: 'Política de privacitat',
             content: 'Tiquetaire prioritza la teva privacitat. L\'aplicació no recull, ni emmagatzema, ni envia cap dada a cap servidor extern. Tota la informació llegida de la targeta de transport es processa localment al teu dispositiu i desapareix en tancar l\'aplicació.',
+            developer: 'Desenvolupador: Òscar Rovira',
+            noData: 'Aquesta aplicació no recull cap dada! No hi ha anuncis ni mecanismes de seguiment.',
+            googlePlayCrashReport: 'Si l\'aplicació s\'ha instal·lat mitjançant Google Play, el desenvolupador rep un informe genèric en cas que l\'aplicació falli. Les dades d\'aquest informe de fallades no es compartiran amb ningú i només s\'utilitzaran per millorar l\'aplicació.',
         },
     },
     es: {
@@ -264,6 +270,9 @@ export const translations: Record<Language, Translations> = {
         privacy: {
             title: 'Política de privacidad',
             content: 'Tiquetaire prioriza tu privacidad. La aplicación no recoge, ni almacena, ni envía ningún dato a ningún servidor externo. Toda la información leída de la tarjeta de transporte se procesa localmente en tu dispositivo y desaparece al cerrar la aplicación.',
+            developer: 'Desarrollador: Oscar Rovira',
+            noData: '¡Esta aplicación no recoge ningún dato! No hay anuncios ni mecanismos de seguimiento.',
+            googlePlayCrashReport: 'Si la aplicación se instaló mediante Google Play, el desarrollador recibe un informe genérico en caso de que la aplicación falle. Los datos de este informe de fallos no se compartirán con nadie y solo se utilizarán para mejorar la aplicación.',
         },
     },
     en: {
@@ -352,6 +361,9 @@ export const translations: Record<Language, Translations> = {
         privacy: {
             title: 'Privacy Policy',
             content: 'Tiquetaire prioritizes your privacy. The application does not collect, store, or send any data to any external server. All information read from the transport card is processed locally on your device and disappears when the application is closed.',
+            developer: 'Developer: Oscar Rovira',
+            noData: 'This app does not collect any data! There are no ads or tracking mechanisms.',
+            googlePlayCrashReport: 'If the app was installed using Google Play the developer gets a generic report in case of an app crash. The data in this crash report will not be shared with anyone and only be used to improve the app.',
         },
     },
 };

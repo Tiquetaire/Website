@@ -45,7 +45,11 @@ export default function PrivacyPage() {
                             {t.privacy.title}
                         </h1>
                         <div style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+                            <p style={{ fontWeight: '600', color: 'var(--text-primary)', marginBottom: '1.5rem' }}>{t.privacy.developer}</p>
                             <p>{t.privacy.content}</p>
+                            <p style={{ marginTop: '1.5rem', fontWeight: '500', color: 'var(--text-primary)' }}>{t.privacy.noData}</p>
+                            <p style={{ marginTop: '1.5rem' }}>{t.privacy.googlePlayCrashReport}</p>
+
                             <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(242, 140, 0, 0.05)', borderRadius: 'var(--radius-lg)', borderLeft: '4px solid var(--primary)' }}>
                                 <p>{t.footer.disclaimer}</p>
                             </div>
